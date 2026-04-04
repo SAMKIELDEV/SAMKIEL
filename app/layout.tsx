@@ -48,7 +48,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        <Toaster position="bottom-right" richColors />
+        <Toaster position="bottom-right" theme="dark" richColors />
       </body>
     </html>
   )

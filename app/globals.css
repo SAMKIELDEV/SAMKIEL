@@ -129,3 +129,24 @@ h1, h2, h3, h4, h5, h6 {
     linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }
+
+/* Sleek Minimal Toast */
+[data-sonner-toast] {
+  background: rgba(17, 17, 17, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: var(--white) !important;
+  font-family: var(--font-figtree-src), sans-serif !important;
+  border-radius: 100px !important; /* Pill shape for sleekness */
+  padding: 12px 24px !important;
+  font-size: 13px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-sonner-toast][data-style="success"] {
+  border: 1px solid rgba(232, 255, 71, 0.2) !important;
+}
+
+[data-sonner-toast] [data-icon] {
+  color: var(--accent) !important;
+}
