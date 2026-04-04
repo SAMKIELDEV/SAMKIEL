@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Syne, Figtree } from 'next/font/google'
 import { Toaster } from 'sonner'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const syne = Syne({
@@ -44,6 +46,8 @@ export default function RootLayout({
     <html lang="en" className={`${syne.variable} ${figtree.variable}`}>
       <body>
         {children}
+        <Analytics />
+        <SpeedInsights />
         <Toaster position="bottom-right" richColors />
       </body>
     </html>
