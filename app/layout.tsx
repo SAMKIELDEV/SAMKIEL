@@ -3,18 +3,18 @@ import { Syne, Figtree } from 'next/font/google'
 import { Toaster } from 'sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import './layout.css'
+import './globals.css'
 
 const syne = Syne({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-display',
+  weight: ['400', '700'],
+  variable: '--font-syne-src',
 })
 
 const figtree = Figtree({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
-  variable: '--font-body',
+  variable: '--font-figtree-src',
 })
 
 export const metadata: Metadata = {

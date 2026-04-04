@@ -38,7 +38,7 @@ export const Navbar = () => {
         {/* Wordmark */}
         <a
           href="#hero"
-          className="font-[var(--font-display)] text-xl font-extrabold tracking-tight text-white"
+          className="font-[var(--font-display)] text-xl font-extrabold leading-none tracking-tight text-white"
           style={{ fontFamily: 'var(--font-display), sans-serif' }}
         >
           SAMKIEL

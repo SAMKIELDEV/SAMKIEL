@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@source "../components/**/*.{ts,tsx}";
-@source "./**/*.{ts,tsx}";
 
 :root {
   --bg: #0A0A0A;
@@ -20,8 +18,8 @@
   --color-text: var(--text);
   --color-text-muted: var(--text-muted);
   --color-white: var(--white);
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
+  --font-display: var(--font-syne-src);
+  --font-body: var(--font-figtree-src);
 }
 
 * {
@@ -37,16 +35,14 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-figtree-src), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-syne-src), sans-serif;
   color: var(--white);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
 }
 
 /* Section label badge */
@@ -57,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: var(--accent);
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 /* Scroll-triggered animations */
