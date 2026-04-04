@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   title: 'SAMKIEL — Digitalizing The World',
   description:
     'SAMKIEL is a software company building digital products and client solutions from Lagos, Nigeria.',
-  metadataBase: new URL('https://samkiel.online'),
+  metadataBase: new URL('https://samkiel.tech'),
   openGraph: {
     title: 'SAMKIEL',
     description: 'Digitalizing The World',
-    url: 'https://samkiel.online',
+    url: 'https://samkiel.tech',
     siteName: 'SAMKIEL',
     locale: 'en_US',
     type: 'website',
