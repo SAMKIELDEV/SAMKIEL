@@ -3,7 +3,7 @@ import { Syne, Figtree } from 'next/font/google'
 import { Toaster } from 'sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import './globals.css'
+import './layout.css'
 
 const syne = Syne({
   subsets: ['latin'],
