@@ -45,6 +45,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display), sans-serif;
   color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 /* Section label badge */
@@ -55,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: var(--accent);
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 /* Scroll-triggered animations */

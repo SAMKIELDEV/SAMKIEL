@@ -33,12 +33,12 @@ export const Hero = () => {
       <div className="relative z-10 mx-auto max-w-[1280px] px-6 py-32 md:px-12 lg:px-20">
         {/* Label */}
         <div ref={headingRef} className="fade-up">
-          <span className="section-label mb-8 inline-block">
+          <span className="section-label mb-10 inline-block md:mb-12">
             SAMKIEL / 2026
           </span>
 
           {/* Headline */}
-          <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.15] tracking-tight text-white md:text-7xl lg:text-8xl">
             We build software
             <br />
             <span className="text-[#E8FF47]">that moves.</span>
@@ -48,7 +48,7 @@ export const Hero = () => {
         {/* Subheadline */}
         <p
           ref={subtextRef}
-          className="fade-up mt-6 max-w-xl text-base leading-relaxed text-[#888888] md:text-lg"
+          className="fade-up mt-8 max-w-xl text-base leading-relaxed text-[#888888] md:mt-10 md:text-lg"
         >
           SAMKIEL is a software company building digital products and client
           solutions from Lagos, Nigeria. Agency work. Studio products. Shipped
@@ -56,7 +56,7 @@ export const Hero = () => {
         </p>
 
         {/* CTAs */}
-        <div ref={ctaRef} className="fade-up mt-10 flex flex-col gap-4 sm:flex-row">
+        <div ref={ctaRef} className="fade-up mt-12 flex flex-col gap-4 sm:flex-row md:mt-16">
           <a
             href="#work"
             className="inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-3.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
