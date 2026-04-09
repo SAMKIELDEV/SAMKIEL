@@ -51,7 +51,7 @@ export const Hero = () => {
           className="fade-up mt-8 max-w-xl text-base leading-relaxed text-[#888888] md:mt-10 md:text-lg lg:mt-12"
         >
           SAMKIEL is a software company building digital products and client
-          solutions from Lagos, Nigeria. Agency work. Studio products. Shipped
+          solutions from Ile Ife, Nigeria. Agency work. Studio products. Shipped
           for the world.
         </p>
 

@@ -10,7 +10,7 @@
 - **Name:** SAMKIEL
 - **Tagline:** Digitalizing The World
 - **Domain:** samkiel.tech
-- **Location:** Lagos, Nigeria
+- **Location:** Ile Ife, Nigeria
 - **Philosophy:** High Performance, Premium Aesthetics, No-BS Digitalization.
 
 ## Tech Stack (Next.js 16)

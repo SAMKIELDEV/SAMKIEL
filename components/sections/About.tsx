@@ -4,8 +4,8 @@ import { useScrollReveal } from '@/components/hooks/useScrollReveal'
 
 const stats = [
   { value: '2', label: 'Products Shipped' },
-  { value: '2024', label: 'Founded' },
-  { value: 'Lagos', label: 'Nigeria' },
+  { value: '2023', label: 'Founded' },
+  { value: 'Ile Ife', label: 'Nigeria' },
 ]
 
 export const About = () => {
@@ -20,7 +20,7 @@ export const About = () => {
         <div ref={headerRef} className="fade-up mb-12">
           <span className="section-label">About</span>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
-            Built from Lagos.
+            Built from Ile Ife.
             <br />
             Shipped for the world.
           </h2>
