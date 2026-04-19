@@ -8,7 +8,7 @@
 
 ## Project Identity
 - **Name:** SAMKIEL
-- **Tagline:** Digitalizing The World
+- **Tagline:** Software With Intention
 - **Domain:** samkiel.tech
 - **Location:** Ile Ife, Nigeria
 - **Philosophy:** High Performance, Premium Aesthetics, No-BS Digitalization.
@@ -58,8 +58,8 @@
 ---
 
 ## Product Ecosystem (Studio)
-- **BreezrChat** → `https://breezrchat.samkiel.tech` (or current URL if subdomain not set yet: `https://breezrchat.onrender.com`)
-- **SKDL** → `https://skdl.samkiel.tech`
+- **BreezrChat** → `https://breezrchat.onrender.com/`
+- **SKDL** → `https://samkiel.online`
 
 ---
 

@@ -17,7 +17,7 @@ SAMKIEL is not just a software agency; it's a "digitalization" hub. The company 
 1.  **SAMKIEL Agency:** Building bespoke solutions for clients.
 2.  **SAMKIEL Studio:** Creating in-house products (SaaS, platforms, tools).
 
-**Tagline:** "Digitalizing The World"
+**Tagline:** "Software With Intention"
 
 ---
 
@@ -32,7 +32,7 @@ SAMKIEL is not just a software agency; it's a "digitalization" hub. The company 
 
 ### A. Hero Section
 -   **Visual:** High-fidelity, premium dark aesthetic. Smooth entry animations.
--   **Copy:** Bold "SAMKIEL — Digitalizing The World."
+-   **Copy:** Bold "SAMKIEL — Software With Intention."
 -   **CTA:** "Get Started" (Scroll to Contact) or "View Studio."
 
 ### B. The Agency (Service Arm)
@@ -44,10 +44,10 @@ SAMKIEL is not just a software agency; it's a "digitalization" hub. The company 
 Showcase in-house products. For now:
 1.  **BreezrChat**
     - Description: Lightweight, lightning-fast chat solution.
-    - Link: `breezrchat.samkiel.tech`
+    - Link: `breezrchat.onrender.com`
 2.  **SKDL**
     - Description: Premium platform for digital asset management/access.
-    - Link: `skdl.samkiel.tech`
+    - Link: `samkiel.online`
 
 ### D. About Section
 -   Brief story of the company’s "High Performance" and "No-BS" philosophy.

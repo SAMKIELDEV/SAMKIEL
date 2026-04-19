@@ -112,11 +112,11 @@ export const Contact = () => {
               </p>
               <div className="space-y-4">
                 <a
-                  href="mailto:contact@samkiel.tech"
+                  href="mailto:hello@samkiel.tech"
                   className="flex items-center gap-3 text-sm text-[#D4D4D4] transition-colors duration-200 hover:text-white"
                 >
                   <Mail size={16} className="text-[#E8FF47]" />
-                  contact@samkiel.tech
+                  hello@samkiel.tech
                 </a>
                 <a
                   href="https://github.com/SAMKIELDEV"

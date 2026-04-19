@@ -41,7 +41,7 @@ We use the Next.js Metadata API for SEO and Social Sharing. Base URL is configur
 metadataBase: new URL('https://samkiel.tech'),
 openGraph: {
   title: 'SAMKIEL',
-  description: 'Digitalizing The World',
+  description: 'Software With Intention',
   url: 'https://samkiel.tech',
   // ...
 }
@@ -79,8 +79,8 @@ We use a custom hook `useScrollReveal` (or CSS Intersection Observer classes) to
 
 ## 6. Studio Products
 The Studio section links to external/sub-projects:
-- **BreezrChat:** `https://breezrchat.samkiel.tech`
-- **SKDL:** `https://skdl.samkiel.tech`
+- **BreezrChat:** `https://breezrchat.onrender.com/`
+- **SKDL:** `https://samkiel.online`
 
 ---
 
@@ -94,7 +94,7 @@ The Studio section links to external/sub-projects:
 
 ## 8. Contact Setup
 The contact form/links lead to:
-- **Email:** `contact@samkiel.tech`
+- **Email:** `hello@samkiel.tech`
 - **Socials:** Configured in `Footer.tsx` and `Contact.tsx`.
 
 ---

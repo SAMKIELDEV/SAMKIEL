@@ -17,7 +17,7 @@ const products: Product[] = [
     tagline: 'Chat, simplified.',
     description:
       'A real-time chat product built for speed and simplicity.',
-    url: 'https://breezrchat.samkiel.tech',
+    url: 'https://breezrchat.onrender.com/',
     status: 'Live',
   },
   {
@@ -25,7 +25,7 @@ const products: Product[] = [
     tagline: 'Download anything.',
     description:
       'A fast, clean tool for downloading content from the web.',
-    url: 'https://skdl.samkiel.tech',
+    url: 'https://samkiel.online',
     status: 'Live',
   },
 ]
