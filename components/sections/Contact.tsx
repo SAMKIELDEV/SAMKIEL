@@ -5,6 +5,8 @@ import { toast } from 'sonner'
 import { Mail } from 'lucide-react'
 import { useScrollReveal } from '@/components/hooks/useScrollReveal'
 
+import { sendEmail } from '@/app/actions'
+
 interface FormData {
   name: string
   email: string
@@ -27,10 +29,14 @@ export const Contact = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      // TODO: wire to Resend / Formspree / EmailJS
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      toast.success("Message sent. We'll be in touch.")
-      setForm({ name: '', email: '', message: '' })
+      const result = await sendEmail(form)
+      
+      if (result.success) {
+        toast.success("Message sent. We'll be in touch.")
+        setForm({ name: '', email: '', message: '' })
+      } else {
+        toast.error(result.error || 'Something went wrong. Try again.')
+      }
     } catch {
       toast.error('Something went wrong. Try again.')
     } finally {
