@@ -14,7 +14,7 @@ export async function sendEmail({
   try {
     const { data, error } = await resend.emails.send({
       from: 'SAMKIEL <contact@samkiel.tech>',
-      to: ['ceo@samkiel.dev'],
+      to: [ 'hello@samkiel.tech', 'ceo@samkiel.dev'],
       subject: `New Inquiry: ${name}`,
       replyTo: email,
       html: `
