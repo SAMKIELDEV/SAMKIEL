@@ -13,15 +13,15 @@ export async function sendEmail({
 }) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'SAMKIEL <contact@samkiel.tech>',
+      from: 'SAMKIEL TECH <contact@samkiel.tech>',
       to: [ 'hello@samkiel.tech', 'ceo@samkiel.dev'],
-      subject: `New Inquiry: ${name}`,
+      subject: `New Inquiry From ${name}`,
       replyTo: email,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background-color: #0a0a0a; color: #ffffff; padding: 40px; border: 1px solid #1f1f1f; border-radius: 12px;">
           <div style="margin-bottom: 30px;">
             <h2 style="color: #e8ff47; font-size: 24px; font-weight: 700; margin: 0;">New Contact Form Submission</h2>
-            <p style="color: #888888; font-size: 14px; margin-top: 8px;">Received from your website's contact form.</p>
+            <p style="color: #888888; font-size: 14px; margin-top: 8px;">Received from SAMKIEL contact form.</p>
           </div>
           
           <div style="background-color: #111111; padding: 24px; border-radius: 8px; border-left: 4px solid #e8ff47;">
