@@ -51,20 +51,20 @@ export const Hero = () => {
           className="fade-up mt-8 max-w-xl text-base leading-relaxed text-[#888888] md:mt-10 md:text-lg lg:mt-12"
         >
           SAMKIEL is a software company building digital products and client
-          solutions from Ile Ife, Nigeria. Agency work. Studio products. Shipped
+          solutions. Agency work. Studio products. Shipped
           for the world.
         </p>
 
         {/* CTAs */}
         <div ref={ctaRef} className="fade-up mt-12 flex flex-row items-center gap-6 md:mt-16">
           <a
-            href="#work"
+            href="/#work"
             className="inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-3.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
           >
             See Our Work
           </a>
           <a
-            href="#studio"
+            href="/#studio"
             className="inline-flex items-center justify-center rounded-full border border-[#1F1F1F] px-7 py-3.5 text-sm font-medium text-[#D4D4D4] transition-all duration-200 hover:border-[#888888] hover:text-white"
           >
             Explore Studio

@@ -3,7 +3,7 @@
 ## Project Overview
 **Company:** SAMKIEL  
 **Founder:** SAMKIEL  
-**Location:** Ile Ife, Nigeria  
+**Location:** Remote (Nigeria)  
 **Website:** samkiel.tech  
 **Stack:** Next.js 16, Tailwind CSS 4, Framer Motion
 
@@ -51,7 +51,7 @@ Showcase in-house products. For now:
 
 ### D. About Section
 -   Brief story of the company’s "High Performance" and "No-BS" philosophy.
--   Emphasis on the Ile Ife base and global reach.
+-   Emphasis on the digital-first approach and global reach.
 
 ### E. Contact Section
 -   Simple, sleek form (or direct email).

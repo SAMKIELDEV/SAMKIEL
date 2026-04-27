@@ -10,7 +10,7 @@
 - **Name:** SAMKIEL
 - **Tagline:** Software With Intention
 - **Domain:** samkiel.tech
-- **Location:** Ile Ife, Nigeria
+- **Location:** Remote (Nigeria)
 - **Philosophy:** High Performance, Premium Aesthetics, No-BS Digitalization.
 
 ## Tech Stack (Next.js 16)

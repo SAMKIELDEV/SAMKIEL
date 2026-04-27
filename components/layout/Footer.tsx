@@ -1,10 +1,11 @@
 import Link from 'next/link'
 
 const footerLinks = [
-  { label: 'Work', href: '#work' },
-  { label: 'Studio', href: '#studio' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Work', href: '/#work' },
+  { label: 'Studio', href: '/#studio' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/samkiell/' },
 ]
 
 const legalLinks = [

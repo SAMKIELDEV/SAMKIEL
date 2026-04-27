@@ -5,10 +5,10 @@ import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-  { label: 'Work', href: '#work' },
-  { label: 'Studio', href: '#studio' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Work', href: '/#work' },
+  { label: 'Studio', href: '/#studio' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export const Navbar = () => {
@@ -37,7 +37,7 @@ export const Navbar = () => {
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 md:px-12 lg:px-20">
         {/* Wordmark */}
         <a
-          href="#hero"
+          href="/"
           className="font-[var(--font-display)] text-xl font-extrabold leading-none tracking-tight text-white"
           style={{ fontFamily: 'var(--font-display), sans-serif' }}
         >
@@ -59,7 +59,7 @@ export const Navbar = () => {
 
         {/* Desktop CTA */}
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-[#E8FF47] px-5 py-2.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_20px_rgba(232,255,71,0.3)] md:inline-flex"
         >
           Start a Project
@@ -95,7 +95,7 @@ export const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={handleNavClick}
             className="mt-2 rounded-full bg-[#E8FF47] px-5 py-2.5 text-center text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a]"
           >

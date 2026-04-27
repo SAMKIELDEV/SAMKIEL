@@ -28,7 +28,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. About SAMKIEL</h2>
             <p>
-              SAMKIEL is a software company operating under two arms: an <strong>Agency</strong> that builds digital products for clients, and a <strong>Studio</strong> that builds and operates internally owned products. SAMKIEL is based in Lagos, Nigeria.
+              SAMKIEL is a software company operating under two arms: an <strong>Agency</strong> that builds digital products for clients, and a <strong>Studio</strong> that builds and operates internally owned products.
             </p>
           </section>
 
@@ -109,7 +109,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">9. Governing Law</h2>
             <p>
-              These Terms are governed by the laws of the Federal Republic of Nigeria. Any disputes arising from these Terms shall first be subject to good-faith negotiation, followed by mediation or arbitration in Lagos, Nigeria, before any court proceedings are initiated.
+              These Terms are governed by the laws of the Federal Republic of Nigeria. Any disputes arising from these Terms shall first be subject to good-faith negotiation, followed by mediation or arbitration in Nigeria, before any court proceedings are initiated.
             </p>
           </section>
 
@@ -121,7 +121,6 @@ export default function TermsOfService() {
             <div className="bg-secondary/30 p-6 rounded-xl border border-border mt-4">
               <p><strong>Email:</strong> <a href="mailto:hello@samkiel.tech" className="text-primary hover:underline">hello@samkiel.tech</a></p>
               <p><strong>Website:</strong> <Link href="https://samkiel.tech" className="text-primary hover:underline">samkiel.tech</Link></p>
-              <p><strong>Location:</strong> Lagos, Nigeria</p>
             </div>
           </section>
         </div>

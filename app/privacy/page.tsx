@@ -110,7 +110,6 @@ export default function PrivacyPolicy() {
             </p>
             <div className="bg-secondary/30 p-6 rounded-xl border border-border mt-4">
               <p><strong>Email:</strong> hello@samkiel.tech</p>
-              <p><strong>Location:</strong> Lagos, Nigeria</p>
             </div>
             <p className="mt-4 text-sm italic">
               If you are not satisfied with our response, you have the right to lodge a complaint with the Nigeria Data Protection Bureau (NDPB) at ndpb.gov.ng.

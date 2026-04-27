@@ -13,7 +13,7 @@ export async function sendEmail({
 }) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'SAMKIEL TECH <contact@samkiel.tech>',
+      from: 'SAMKIEL TECH <hello@samkiel.tech>',
       to: [ 'hello@samkiel.tech', 'ceo@samkiel.dev'],
       subject: `New Inquiry From ${name}`,
       replyTo: email,

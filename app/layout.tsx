@@ -21,7 +21,7 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   title: 'SAMKIEL — Software With Intention',
   description:
-    'SAMKIEL is a software company building digital products and client solutions from Ile Ife, Nigeria.',
+    'SAMKIEL is a software company building digital products and client solutions.',
   metadataBase: new URL('https://samkiel.tech'),
   openGraph: {
     title: 'SAMKIEL',
