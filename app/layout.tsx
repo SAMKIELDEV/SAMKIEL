@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       'SAMKIEL is a software company building bespoke client solutions and internally owned products.',
   },
   icons: {
-    icon: '/favicon_sm.png',
+    icon: '/assets/favicon.png',
   },
 }
 

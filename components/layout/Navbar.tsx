@@ -50,7 +50,7 @@ export const Navbar = () => {
         {/* Icon logo */}
         <Link href="/" className="inline-flex items-center">
           <Image
-            src="/assets/favicon_sm.png"
+            src="/assets/favicon.png"
             alt="SAMKIEL"
             width={32}
             height={32}

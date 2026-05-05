@@ -55,12 +55,12 @@ export const Footer = () => {
         <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#E8FF47]/40 to-transparent" />
       </div>
 
-      <div className="mx-auto max-w-[1280px] px-6 pb-10 pt-20 md:px-12 lg:px-20">
+      <div className="mx-auto max-w-[1280px] px-6 pb-20 pt-20 md:px-12 lg:px-20">
         {/* Brand */}
         <div className="mb-12">
           <Link href="/" className="inline-block">
             <Image
-              src="/assets/SAMKIEL_LOGO_sm.png"
+              src="/assets/samkiel_logo.png"
               alt="SAMKIEL"
               width={160}
               height={40}
@@ -163,14 +163,14 @@ export const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-[#27272A] pt-6">
-          <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-xs text-[#3F3F46]">
+        <div className="mt-14 border-t border-[#27272A] pt-8">
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+            <p className="text-[13px] text-[#52525B]">
               © {new Date().getFullYear()} SAMKIEL. All rights reserved.
             </p>
             <a
               href="mailto:hello@samkiel.tech"
-              className="text-xs text-[#3F3F46] transition-colors duration-200 hover:text-[#E8FF47]"
+              className="text-[13px] text-[#52525B] transition-colors duration-200 hover:text-[#E8FF47]"
             >
               hello@samkiel.tech
             </a>
