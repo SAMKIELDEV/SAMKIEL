@@ -32,6 +32,17 @@ export const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [menuOpen])
+
   const handleNavClick = () => {
     setMenuOpen(false)
     setDropdownOpen(false)
@@ -41,7 +52,7 @@ export const Navbar = () => {
     <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
+        scrolled && !menuOpen
           ? 'bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#27272A]'
           : 'bg-transparent'
       )}
@@ -144,57 +155,87 @@ export const Navbar = () => {
         )}
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <Link href="/" onClick={handleNavClick} className="inline-flex items-center gap-2">
+          <Link href="/" onClick={handleNavClick} className="inline-flex items-center gap-2.5">
             <Image
               src="/assets/favicon.png"
               alt="SAMKIEL"
-              width={32}
-              height={32}
-              className="h-8 w-8"
+              width={28}
+              height={28}
+              className="h-7 w-7"
             />
-            <span className="text-lg font-bold text-white">SAMKIEL</span>
+            <span className="text-lg font-bold tracking-tight text-white">SAMKIEL</span>
           </Link>
           <button
             onClick={() => setMenuOpen(false)}
-            className="flex items-center justify-center text-white"
+            className="flex h-10 w-10 items-center justify-center text-white"
             aria-label="Close menu"
           >
             <X size={24} />
           </button>
         </div>
 
-        <div className="flex flex-1 flex-col justify-center gap-2 px-8">
-          <a
-            href="/#about"
-            onClick={handleNavClick}
-            className="py-4 text-2xl font-bold text-white transition-colors hover:text-[#E8FF47]"
-            style={{ fontFamily: 'var(--font-display), sans-serif' }}
-          >
-            About
-          </a>
-          <Link
-            href="/studio/kiv"
-            onClick={handleNavClick}
-            className="py-4 text-2xl font-bold text-white transition-colors hover:text-[#E8FF47]"
-            style={{ fontFamily: 'var(--font-display), sans-serif' }}
-          >
-            Kiv
-          </Link>
-          <a
-            href="/#agency"
-            onClick={handleNavClick}
-            className="py-4 text-2xl font-bold text-white transition-colors hover:text-[#E8FF47]"
-            style={{ fontFamily: 'var(--font-display), sans-serif' }}
-          >
-            Agency
-          </a>
-          <a
-            href="/contact"
-            onClick={handleNavClick}
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-4 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
-          >
-            Start a Project →
-          </a>
+        <div className="flex flex-1 flex-col overflow-y-auto px-6 pt-8 pb-12">
+          <nav className="flex flex-col border-t border-[#27272A]/30">
+            <a
+              href="/#about"
+              onClick={handleNavClick}
+              className="flex items-center justify-between border-b border-[#27272A]/30 py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
+              style={{ fontFamily: 'var(--font-display), sans-serif' }}
+            >
+              About
+            </a>
+            <div className="flex flex-col border-b border-[#27272A]/30">
+              <button
+                className="flex items-center justify-between py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
+                style={{ fontFamily: 'var(--font-display), sans-serif' }}
+              >
+                Products
+                <ChevronDown size={20} className="text-[#52525B]" />
+              </button>
+              <div className="flex flex-col gap-4 pb-6 pl-4">
+                <Link
+                  href="/studio/kiv"
+                  onClick={handleNavClick}
+                  className="text-lg text-[#A1A1AA] hover:text-[#E8FF47]"
+                >
+                  Kiv — Daily check-in
+                </Link>
+              </div>
+            </div>
+            <a
+              href="/#agency"
+              onClick={handleNavClick}
+              className="flex items-center justify-between border-b border-[#27272A]/30 py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
+              style={{ fontFamily: 'var(--font-display), sans-serif' }}
+            >
+              Agency
+            </a>
+            <Link
+              href="/work"
+              onClick={handleNavClick}
+              className="flex items-center justify-between border-b border-[#27272A]/30 py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
+              style={{ fontFamily: 'var(--font-display), sans-serif' }}
+            >
+              Work
+            </Link>
+          </nav>
+
+          <div className="mt-auto flex flex-col gap-4 pt-12">
+            <Link
+              href="/contact"
+              onClick={handleNavClick}
+              className="inline-flex h-14 items-center justify-center rounded-xl bg-[#E8FF47] text-base font-semibold text-[#0A0A0A] transition-all hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.2)]"
+            >
+              Start a Project
+            </Link>
+            <Link
+              href="/work"
+              onClick={handleNavClick}
+              className="inline-flex h-14 items-center justify-center rounded-xl border border-[#27272A] bg-transparent text-base font-semibold text-white transition-all hover:bg-white/5"
+            >
+              Explore Portfolio
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

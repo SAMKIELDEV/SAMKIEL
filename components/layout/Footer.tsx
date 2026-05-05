@@ -60,7 +60,7 @@ export const Footer = () => {
         <div className="mb-12">
           <Link href="/" className="inline-block">
             <Image
-              src="/assets/SAMKIEL_LOGO.png"
+              src="/assets/samkiel_logo.png"
               alt="SAMKIEL"
               width={160}
               height={40}
