@@ -5,7 +5,7 @@ import { Arms } from '@/components/sections/Arms'
 import { Studio } from '@/components/sections/Studio'
 import { Agency } from '@/components/sections/Agency'
 import { About } from '@/components/sections/About'
-import { Contact } from '@/components/sections/Contact'
+import { ContactCTA } from '@/components/sections/ContactCTA'
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Studio />
       <Agency />
       <About />
-      <Contact />
+      <ContactCTA />
       <Footer />
     </main>
   )

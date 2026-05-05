@@ -34,7 +34,7 @@ export default function WorkPage() {
             to discuss your project.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-3.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
           >
             Start a Project →

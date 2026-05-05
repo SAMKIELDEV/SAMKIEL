@@ -130,7 +130,7 @@ export const Agency = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#E8FF47] transition-all duration-200 hover:gap-3"
           >
             Start a Project

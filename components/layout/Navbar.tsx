@@ -112,7 +112,7 @@ export const Navbar = () => {
 
         {/* Desktop CTA */}
         <a
-          href="/#contact"
+          href="/contact"
           className="hidden rounded-full bg-[#E8FF47] px-5 py-2.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_20px_rgba(232,255,71,0.3)] md:inline-flex"
         >
           Start a Project →
@@ -182,7 +182,7 @@ export const Navbar = () => {
             Agency
           </a>
           <a
-            href="/#contact"
+            href="/contact"
             onClick={handleNavClick}
             className="mt-6 inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-4 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a]"
           >
