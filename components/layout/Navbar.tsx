@@ -144,14 +144,15 @@ export const Navbar = () => {
         )}
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <Link href="/" onClick={handleNavClick} className="inline-flex items-center">
+          <Link href="/" onClick={handleNavClick} className="inline-flex items-center gap-2">
             <Image
-              src="/assets/SAMKIEL_ICON.png"
+              src="/assets/favicon.png"
               alt="SAMKIEL"
               width={32}
               height={32}
               className="h-8 w-8"
             />
+            <span className="text-lg font-bold text-white">SAMKIEL</span>
           </Link>
           <button
             onClick={() => setMenuOpen(false)}
@@ -190,7 +191,7 @@ export const Navbar = () => {
           <a
             href="/contact"
             onClick={handleNavClick}
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-4 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a]"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-4 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
           >
             Start a Project →
           </a>
