@@ -28,7 +28,7 @@ const itemVariants = {
 
 export const SamkielID = () => {
   return (
-    <section id="samkiel-id" className="relative overflow-hidden py-24 md:py-32">
+    <section id="samkiel-id" className="relative overflow-hidden py-12 md:py-16">
       {/* Background Treatment: Subtle accent tint over #0A0A0A with a bordered card effect */}
       <div className="absolute inset-0 bg-[#0A0A0A]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,255,71,0.03)_0%,transparent_70%)]" />
@@ -77,7 +77,7 @@ export const SamkielID = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold text-black transition-transform hover:scale-[1.02] active:scale-[0.98]"
               >
-                Create Account
+                Create a SAMKIEL ID
                 <ArrowRight size={18} />
               </a>
               

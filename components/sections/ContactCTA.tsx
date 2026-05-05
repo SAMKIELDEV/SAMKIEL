@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 
 export const ContactCTA = () => {
   return (
-    <section className="border-t border-[#27272A] py-24 md:py-32">
+    <section className="border-t border-[#27272A] py-12 md:py-16">
       <motion.div
         className="mx-auto max-w-[1280px] px-6 text-center md:px-12 lg:px-20"
         initial={{ opacity: 0, y: 30 }}
@@ -20,13 +20,15 @@ export const ContactCTA = () => {
         <p className="mx-auto mb-10 max-w-lg text-base text-[#A1A1AA]">
           Tell us what you&apos;re working on. We&apos;ll take it from there.
         </p>
-        <Link
-          href="/contact"
+        <a
+          href="https://account.samkiel.tech"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-[#E8FF47] px-8 py-4 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
         >
-          Start a Project
+          Create a SAMKIEL ID
           <ArrowRight size={14} />
-        </Link>
+        </a>
       </motion.div>
     </section>
   )

@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Arms />
-      <Studio />
       <SamkielID />
+      <Studio />
       <Agency />
       <About />
       <ContactCTA />

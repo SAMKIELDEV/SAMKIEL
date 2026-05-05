@@ -39,7 +39,7 @@ const arms = [
 
 export const Arms = () => {
   return (
-    <section id="arms" className="border-t border-[#27272A] py-24 md:py-32">
+    <section id="arms" className="border-t border-[#27272A] py-12 md:py-16">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12 lg:px-20">
         <motion.div
           className="grid grid-cols-1 gap-6 md:grid-cols-2"

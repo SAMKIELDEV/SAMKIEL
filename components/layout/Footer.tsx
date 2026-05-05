@@ -56,121 +56,123 @@ export const Footer = () => {
       </div>
 
       <div className="mx-auto max-w-[1280px] px-6 pb-20 pt-20 md:px-12 lg:px-20">
-        {/* Brand */}
-        <div className="mb-12">
-          <Link href="/" className="inline-block">
-            <Image
-              src="/assets/samkiel_logo.png"
-              alt="SAMKIEL"
-              width={160}
-              height={40}
-              className="h-9 w-auto"
-              priority
-            />
-          </Link>
-          <p className="mt-2 text-sm text-[#52525B]">
-            Software With Intention
-          </p>
-          <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-[#3F3F46]">
-            Building software that matters, from Nigeria to the world.
-          </p>
-
-          {/* Social icons */}
-          <div className="mt-6 flex items-center gap-3">
-            {socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target={social.external ? '_blank' : undefined}
-                rel={social.external ? 'noopener noreferrer' : undefined}
-                aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#27272A] bg-transparent text-[#52525B] transition-all duration-200 hover:border-[#E8FF47]/30 hover:bg-[#E8FF47]/5 hover:text-[#E8FF47]"
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Nav columns — 3 across on all sizes */}
-        <div className="grid grid-cols-3 gap-8 lg:gap-12">
-
-          {/* Products column */}
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
-              Products
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-20">
+          {/* Brand */}
+          <div className="max-w-xs">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/assets/samkiel_logo.png"
+                alt="SAMKIEL"
+                width={160}
+                height={40}
+                className="h-9 w-auto"
+                priority
+              />
+            </Link>
+            <p className="mt-2 text-sm text-[#52525B]">
+              Software With Intention
             </p>
-            <ul className="flex flex-col gap-3">
-              {productLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+            <p className="mt-3 text-[13px] leading-relaxed text-[#3F3F46]">
+              Building software that matters, from Nigeria to the world.
+            </p>
+
+            {/* Social icons */}
+            <div className="mt-6 flex items-center gap-3">
+              {socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target={social.external ? '_blank' : undefined}
+                  rel={social.external ? 'noopener noreferrer' : undefined}
+                  aria-label={social.label}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#27272A] bg-transparent text-[#52525B] transition-all duration-200 hover:border-[#E8FF47]/30 hover:bg-[#E8FF47]/5 hover:text-[#E8FF47]"
+                >
+                  {social.icon}
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Company column */}
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
-              Company
-            </p>
-            <ul className="flex flex-col gap-3">
-              {companyLinks.map((link) => (
-                <li key={link.href}>
-                  {link.href.startsWith('/#') ? (
-                    <a
-                      href={link.href}
-                      className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
-                    >
-                      {link.label}
-                    </a>
-                  ) : (
+          {/* Nav columns — 3 across on all sizes */}
+          <div className="grid grid-cols-3 gap-8 md:gap-12 lg:gap-24">
+
+            {/* Products column */}
+            <div>
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
+                Products
+              </p>
+              <ul className="flex flex-col gap-3">
+                {productLinks.map((link) => (
+                  <li key={link.href}>
                     <Link
                       href={link.href}
                       className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
                     >
                       {link.label}
                     </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Legal column */}
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
-              Legal
-            </p>
-            <ul className="flex flex-col gap-3">
-              {legalLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Company column */}
+            <div>
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
+                Company
+              </p>
+              <ul className="flex flex-col gap-3">
+                {companyLinks.map((link) => (
+                  <li key={link.href}>
+                    {link.href.startsWith('/#') ? (
+                      <a
+                        href={link.href}
+                        className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal column */}
+            <div>
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
+                Legal
+              </p>
+              <ul className="flex flex-col gap-3">
+                {legalLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-14 border-t border-[#27272A] pt-8">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-            <p className="text-[13px] text-[#52525B]">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-center">
+            <p className="text-center text-[13px] text-[#52525B] sm:text-left">
               © {new Date().getFullYear()} SAMKIEL. All rights reserved.
             </p>
             <a
               href="mailto:hello@samkiel.tech"
-              className="text-[13px] text-[#52525B] transition-colors duration-200 hover:text-[#E8FF47]"
+              className="hidden text-[13px] text-[#52525B] transition-colors duration-200 hover:text-[#E8FF47] sm:block"
             >
               hello@samkiel.tech
             </a>
