@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @source "../app/**/*.{ts,tsx}";
 @source "../components/**/*.{ts,tsx}";
@@ -10,10 +7,10 @@
 :root {
   --bg: #0A0A0A;
   --surface: #111111;
-  --border: #1F1F1F;
+  --border: #27272A;
   --accent: #E8FF47;
-  --text: #D4D4D4;
-  --text-muted: #888888;
+  --text: #FAFAFA;
+  --text-muted: #A1A1AA;
   --white: #FFFFFF;
 }
 
@@ -43,7 +40,7 @@ html {
 
 body {
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-muted);
   font-family: var(--font-figtree-src), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -65,52 +62,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 16px;
 }
 
-/* Scroll-triggered animations */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger children */
-.stagger-children > * {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.stagger-children.visible > *:nth-child(1) { transition-delay: 0ms; }
-.stagger-children.visible > *:nth-child(2) { transition-delay: 80ms; }
-.stagger-children.visible > *:nth-child(3) { transition-delay: 160ms; }
-.stagger-children.visible > *:nth-child(4) { transition-delay: 240ms; }
-.stagger-children.visible > *:nth-child(5) { transition-delay: 320ms; }
-.stagger-children.visible > *:nth-child(6) { transition-delay: 400ms; }
-
-.stagger-children.visible > * {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hero gradient orbs */
-@keyframes float-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -30px) scale(1.05); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
-}
-
-@keyframes float-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-25px, 15px) scale(0.95); }
-  66% { transform: translate(35px, -25px) scale(1.05); }
-}
-
 /* Noise texture overlay */
 .noise-overlay::before {
   content: '';
@@ -130,6 +81,19 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 60px 60px;
 }
 
+/* Hero gradient orbs */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 15px) scale(0.95); }
+  66% { transform: translate(35px, -25px) scale(1.05); }
+}
+
 /* Sleek Minimal Toast */
 [data-sonner-toast] {
   background: rgba(17, 17, 17, 0.8) !important;
@@ -137,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   color: var(--white) !important;
   font-family: var(--font-figtree-src), sans-serif !important;
-  border-radius: 100px !important; /* Pill shape for sleekness */
+  border-radius: 100px !important;
   padding: 12px 24px !important;
   font-size: 13px !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
@@ -149,4 +113,13 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-sonner-toast] [data-icon] {
   color: var(--accent) !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,12 +1,25 @@
 'use client'
 
-import { useScrollReveal } from '@/components/hooks/useScrollReveal'
+import { motion } from 'framer-motion'
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
+}
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+  },
+}
 
 export const Hero = () => {
-  const headingRef = useScrollReveal()
-  const subtextRef = useScrollReveal()
-  const ctaRef = useScrollReveal()
-
   return (
     <section
       id="hero"
@@ -30,47 +43,46 @@ export const Hero = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 py-32 md:px-12 lg:px-20">
-        {/* Label */}
-        <div ref={headingRef} className="fade-up">
-          <span className="section-label mb-8 inline-block">
-            SAMKIEL / 2026
-          </span>
-
-          {/* Headline */}
-          <h1 className="mb-6 max-w-4xl text-5xl font-bold leading-tight tracking-tight text-white md:mb-10 md:text-7xl lg:text-8xl">
-            We build software
-            <br />
-            <span className="text-[#E8FF47]">that moves.</span>
-          </h1>
-        </div>
-
-        {/* Subheadline */}
-        <p
-          ref={subtextRef}
-          className="fade-up mt-8 max-w-xl text-base leading-relaxed text-[#888888] md:mt-10 md:text-lg lg:mt-12"
+      <motion.div
+        className="relative z-10 mx-auto max-w-[1280px] px-6 py-32 md:px-12 lg:px-20"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.h1
+          variants={item}
+          className="mb-6 max-w-5xl text-5xl font-bold leading-[1.05] tracking-tight text-white md:mb-10 md:text-7xl lg:text-8xl"
         >
-          SAMKIEL is a software company building digital products and client
-          solutions. Agency work. Studio products. Shipped
-          for the world.
-        </p>
+          Software With Intention.
+        </motion.h1>
 
-        {/* CTAs */}
-        <div ref={ctaRef} className="fade-up mt-12 flex flex-row items-center gap-6 md:mt-16">
+        <motion.p
+          variants={item}
+          className="max-w-xl text-base leading-relaxed text-[#A1A1AA] md:text-lg"
+        >
+          SAMKIEL builds software that matters — through a client agency and a
+          studio of products we own.
+        </motion.p>
+
+        <motion.div
+          variants={item}
+          className="mt-10 flex flex-row flex-wrap items-center gap-4 md:mt-14"
+        >
           <a
-            href="/#work"
+            href="/#contact"
             className="inline-flex items-center justify-center rounded-full bg-[#E8FF47] px-7 py-3.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
           >
-            See Our Work
+            Start a Project →
           </a>
           <a
             href="/#studio"
-            className="inline-flex items-center justify-center rounded-full border border-[#1F1F1F] px-7 py-3.5 text-sm font-medium text-[#D4D4D4] transition-all duration-200 hover:border-[#888888] hover:text-white"
+            className="inline-flex items-center justify-center rounded-full border border-[#27272A] px-7 py-3.5 text-sm font-medium text-[#FAFAFA] transition-all duration-200 hover:border-[#A1A1AA] hover:text-white"
           >
-            Explore Studio
+            See What We&apos;re Building
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

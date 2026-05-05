@@ -1,64 +1,110 @@
 import Link from 'next/link'
 
-const footerLinks = [
-  { label: 'Work', href: '/#work' },
-  { label: 'Studio', href: '/#studio' },
-  { label: 'About', href: '/#about' },
-  { label: 'Contact', href: '/#contact' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/samkiell/' },
-]
-
-const legalLinks = [
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Terms', href: '/terms' },
-]
-
 export const Footer = () => {
   return (
-    <footer className="border-t border-[#1F1F1F] bg-[#0A0A0A]">
-      <div className="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-8 px-6 py-12 md:px-12 lg:px-20">
-        <div className="flex w-full flex-col items-center justify-between gap-6 md:flex-row">
-          {/* Wordmark */}
-          <Link
-            href="/"
-            className="text-xl font-extrabold tracking-tight text-white"
-            style={{ fontFamily: 'var(--font-display), sans-serif' }}
-          >
-            SAMKIEL
-          </Link>
-
-          {/* Nav links */}
-          <div className="flex flex-wrap justify-center items-center gap-6">
-            {footerLinks.map((link) => (
+    <footer className="border-t border-[#27272A] bg-[#0A0A0A]">
+      <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-12 lg:px-20">
+        {/* Top grid */}
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+          {/* Brand column */}
+          <div className="col-span-2 sm:col-span-1">
+            <Link
+              href="/"
+              className="text-xl font-bold tracking-tight text-white"
+              style={{ fontFamily: 'var(--font-display), sans-serif' }}
+            >
+              SAMKIEL
+            </Link>
+            <p className="mt-3 text-sm text-[#A1A1AA]">Software With Intention</p>
+            <div className="mt-5 flex flex-col gap-2">
               <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-[#888888] transition-colors duration-200 hover:text-white"
+                href="mailto:hello@samkiel.tech"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
               >
-                {link.label}
+                hello@samkiel.tech
               </a>
-            ))}
+              <a
+                href="https://github.com/SAMKIELDEV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                github.com/SAMKIELDEV
+              </a>
+              <a
+                href="https://www.linkedin.com/company/samkiell/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                linkedin.com/company/samkiell
+              </a>
+            </div>
+          </div>
+
+          {/* Products column */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+              Products
+            </p>
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/studio/kiv"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                Kiv
+              </Link>
+            </div>
+          </div>
+
+          {/* Company column */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+              Company
+            </p>
+            <div className="flex flex-col gap-3">
+              <a
+                href="/#about"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                About
+              </a>
+              <a
+                href="/#agency"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                Agency
+              </a>
+            </div>
+          </div>
+
+          {/* Legal column */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+              Legal
+            </p>
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/terms"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                Terms
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
+              >
+                Privacy
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="flex w-full flex-col items-center justify-between gap-4 border-t border-[#1F1F1F] pt-8 md:flex-row">
-          {/* Copyright */}
-          <p className="text-xs text-[#666666]">
-            © 2026 SAMKIEL. All rights reserved.
+        {/* Bottom copyright */}
+        <div className="mt-16 border-t border-[#27272A] pt-8">
+          <p className="text-xs text-[#52525B]">
+            © {new Date().getFullYear()} SAMKIEL. All rights reserved.
           </p>
-
-          {/* Legal links */}
-          <div className="flex items-center gap-6">
-            {legalLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-[#666666] transition-colors duration-200 hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

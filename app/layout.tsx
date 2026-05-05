@@ -21,11 +21,12 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   title: 'SAMKIEL — Software With Intention',
   description:
-    'SAMKIEL is a software company building digital products and client solutions.',
+    'SAMKIEL is a software company building bespoke client solutions and internally owned products. Agency and Studio, operating remotely from Nigeria.',
   metadataBase: new URL('https://samkiel.tech'),
   openGraph: {
-    title: 'SAMKIEL',
-    description: 'Software With Intention',
+    title: 'SAMKIEL — Software With Intention',
+    description:
+      'SAMKIEL is a software company building bespoke client solutions and internally owned products. Agency and Studio, operating remotely from Nigeria.',
     url: 'https://samkiel.tech',
     siteName: 'SAMKIEL',
     locale: 'en_US',
@@ -33,8 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SAMKIEL',
-    description: 'Software With Intention',
+    title: 'SAMKIEL — Software With Intention',
+    description:
+      'SAMKIEL is a software company building bespoke client solutions and internally owned products.',
   },
   icons: {
     icon: '/icon.jpg',
