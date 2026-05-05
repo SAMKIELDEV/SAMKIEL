@@ -35,7 +35,7 @@ const item = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const },
   },
 }
 
@@ -57,7 +57,7 @@ export const KivContent = () => {
           className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-12 lg:px-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
         >
           {/* Status badge */}
           <div className="mb-6 flex items-center gap-2">
@@ -105,7 +105,7 @@ export const KivContent = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <span className="section-label">What is Kiv</span>
             <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
@@ -146,7 +146,7 @@ export const KivContent = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-white md:text-5xl">
             Start reflecting today.
