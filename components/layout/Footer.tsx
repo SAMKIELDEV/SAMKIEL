@@ -1,18 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { Mail } from 'lucide-react'
-
-const footerNav = [
-  { label: 'About', href: '/#about' },
-  { label: 'Products', href: '/#studio' },
-  { label: 'Agency', href: '/#agency' },
-  { label: 'Contact', href: '/contact' },
-]
-
-const legalNav = [
-  { label: 'Terms', href: '/terms' },
-  { label: 'Privacy', href: '/privacy' },
-]
 
 const GithubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -30,75 +21,62 @@ const LinkedinIcon = () => (
 )
 
 const socials = [
-  {
-    label: 'Email',
-    href: 'mailto:hello@samkiel.tech',
-    external: false,
-  },
-  {
-    label: 'GitHub',
-    href: 'https://github.com/SAMKIELDEV',
-    external: true,
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/samkiell/',
-    external: true,
-  },
+  { label: 'Email', href: 'mailto:hello@samkiel.tech', icon: <Mail size={16} />, external: false },
+  { label: 'GitHub', href: 'https://github.com/SAMKIELDEV', icon: <GithubIcon />, external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/samkiell/', icon: <LinkedinIcon />, external: true },
 ]
 
-const socialIcons: Record<string, React.ReactNode> = {
-  Email: <Mail size={16} />,
-  GitHub: <GithubIcon />,
-  LinkedIn: <LinkedinIcon />,
-}
+const productLinks = [
+  { label: 'Kiv', href: '/studio/kiv' },
+]
+
+const companyLinks = [
+  { label: 'About', href: '/#about' },
+  { label: 'Agency', href: '/#agency' },
+  { label: 'Work', href: '/work' },
+]
+
+const legalLinks = [
+  { label: 'Terms', href: '/terms' },
+  { label: 'Privacy', href: '/privacy' },
+]
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-[#27272A] bg-[#0A0A0A]">
-      <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-12 lg:px-20">
-        {/* Top row — logo + nav + socials */}
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          {/* Logo + tagline */}
-          <div className="flex flex-col gap-3">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/assets/SAMKIEL_LOGO.png"
-                alt="SAMKIEL"
-                width={140}
-                height={36}
-                className="h-8 w-auto"
-                priority
-              />
-            </Link>
-            <p className="text-sm text-[#52525B]">Software With Intention</p>
-          </div>
+    <motion.footer
+      className="relative bg-[#0A0A0A]"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
+    >
+      {/* Top border with accent gradient fade */}
+      <div className="relative h-px w-full bg-[#27272A]">
+        <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#E8FF47]/40 to-transparent" />
+      </div>
 
-          {/* Nav links */}
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {footerNav.map((link) =>
-              link.href.startsWith('/') && !link.href.startsWith('/#') ? (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-white"
-                >
-                  {link.label}
-                </a>
-              )
-            )}
-          </div>
+      <div className="mx-auto max-w-[1280px] px-6 pb-10 pt-20 md:px-12 lg:px-20">
+        {/* Brand */}
+        <div className="mb-12">
+          <Link href="/" className="inline-block">
+            <Image
+              src="/assets/SAMKIEL_LOGO_sm.png"
+              alt="SAMKIEL"
+              width={160}
+              height={40}
+              className="h-9 w-auto"
+              priority
+            />
+          </Link>
+          <p className="mt-2 text-sm text-[#52525B]">
+            Software With Intention
+          </p>
+          <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-[#3F3F46]">
+            Building software that matters, from Nigeria to the world.
+          </p>
 
           {/* Social icons */}
-          <div className="flex items-center gap-4">
+          <div className="mt-6 flex items-center gap-3">
             {socials.map((social) => (
               <a
                 key={social.label}
@@ -106,32 +84,99 @@ export const Footer = () => {
                 target={social.external ? '_blank' : undefined}
                 rel={social.external ? 'noopener noreferrer' : undefined}
                 aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#27272A] text-[#A1A1AA] transition-all duration-200 hover:border-[#E8FF47]/40 hover:text-[#E8FF47]"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#27272A] bg-transparent text-[#52525B] transition-all duration-200 hover:border-[#E8FF47]/30 hover:bg-[#E8FF47]/5 hover:text-[#E8FF47]"
               >
-                {socialIcons[social.label]}
+                {social.icon}
               </a>
             ))}
           </div>
         </div>
 
-        {/* Bottom row — legal + copyright */}
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-[#27272A] pt-8 sm:flex-row sm:items-center">
-          <p className="text-xs text-[#3F3F46]">
-            © {new Date().getFullYear()} SAMKIEL. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            {legalNav.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-[#3F3F46] transition-colors duration-200 hover:text-[#A1A1AA]"
-              >
-                {link.label}
-              </Link>
-            ))}
+        {/* Nav columns — 3 across on all sizes */}
+        <div className="grid grid-cols-3 gap-8 lg:gap-12">
+
+          {/* Products column */}
+          <div>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
+              Products
+            </p>
+            <ul className="flex flex-col gap-3">
+              {productLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company column */}
+          <div>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
+              Company
+            </p>
+            <ul className="flex flex-col gap-3">
+              {companyLinks.map((link) => (
+                <li key={link.href}>
+                  {link.href.startsWith('/#') ? (
+                    <a
+                      href={link.href}
+                      className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal column */}
+          <div>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E8FF47]">
+              Legal
+            </p>
+            <ul className="flex flex-col gap-3">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-16 border-t border-[#27272A] pt-6">
+          <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+            <p className="text-xs text-[#3F3F46]">
+              © {new Date().getFullYear()} SAMKIEL. All rights reserved.
+            </p>
+            <a
+              href="mailto:hello@samkiel.tech"
+              className="text-xs text-[#3F3F46] transition-colors duration-200 hover:text-[#E8FF47]"
+            >
+              hello@samkiel.tech
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }

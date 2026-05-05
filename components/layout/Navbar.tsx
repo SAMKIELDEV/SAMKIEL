@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -46,13 +47,17 @@ export const Navbar = () => {
       )}
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 md:px-12 lg:px-20">
-        {/* Wordmark */}
-        <Link
-          href="/"
-          className="text-xl font-bold leading-none tracking-tight text-white"
-          style={{ fontFamily: 'var(--font-display), sans-serif' }}
-        >
-          SAMKIEL
+        {/* Icon logo */}
+        <Link href="/" className="inline-flex items-center">
+          <Image
+            src="/assets/favicon_sm.png"
+            alt="SAMKIEL"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+            priority  
+          />
+          <span className="text-lg font-bold text-white">SAMKIEL</span>
         </Link>
 
         {/* Desktop nav */}
@@ -139,13 +144,14 @@ export const Navbar = () => {
         )}
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <Link
-            href="/"
-            onClick={handleNavClick}
-            className="text-xl font-bold leading-none tracking-tight text-white"
-            style={{ fontFamily: 'var(--font-display), sans-serif' }}
-          >
-            SAMKIEL
+          <Link href="/" onClick={handleNavClick} className="inline-flex items-center">
+            <Image
+              src="/assets/SAMKIEL_ICON.png"
+              alt="SAMKIEL"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
           </Link>
           <button
             onClick={() => setMenuOpen(false)}
