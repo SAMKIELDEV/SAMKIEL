@@ -4,7 +4,7 @@ import { Footer } from '@/components/layout/Footer'
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#0A0A0A] text-white selection:bg-[#E8FF47]/20 selection:text-[#E8FF47]">
+    <main className="flex min-h-screen flex-col bg-[#0A0A0A] text-white">
       <Navbar />
       <div className="noise-overlay grid-pattern relative flex flex-grow flex-col items-center justify-center px-6 pt-32 pb-20 text-center overflow-hidden">
         {/* Gradient orb */}
@@ -25,7 +25,7 @@ export default function NotFound() {
           <h2 className="mt-8 text-2xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             Lost in space.
           </h2>
-          <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-[#888888] md:text-lg">
+          <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-[#A1A1AA] md:text-lg">
             The page you are looking for doesn&apos;t exist or has been moved to a new dimension.
           </p>
           <div className="mt-12">
