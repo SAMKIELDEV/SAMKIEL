@@ -55,7 +55,7 @@ export const Footer = () => {
         <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#E8FF47]/40 to-transparent" />
       </div>
 
-      <div className="mx-auto max-w-[1280px] px-6 pb-20 pt-20 md:px-12 lg:px-20">
+      <div className="mx-auto max-w-[1280px] px-6 pb-12 pt-20 md:px-12 lg:px-20">
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-20">
           {/* Brand */}
           <div className="max-w-xs">
