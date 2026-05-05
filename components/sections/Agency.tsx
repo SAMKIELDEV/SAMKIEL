@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import {
   Globe,
   Smartphone,
@@ -9,7 +10,6 @@ import {
   MessageSquare,
   type LucideIcon,
 } from 'lucide-react'
-import { useScrollReveal } from '@/components/hooks/useScrollReveal'
 
 interface Service {
   icon: LucideIcon
@@ -21,67 +21,88 @@ const services: Service[] = [
   {
     icon: Globe,
     title: 'Web Development',
-    description: 'Fast, responsive websites and web apps built to convert.',
+    description: 'Fast, responsive web applications built for scale',
   },
   {
     icon: Smartphone,
     title: 'Mobile Apps',
-    description: 'Cross-platform apps that feel native on every device.',
+    description: 'Cross-platform apps with a native feel',
   },
   {
     icon: Bot,
     title: 'AI Products',
-    description: 'Intelligent features and automation built into your product.',
+    description: 'Intelligent features, automation, and AI-native tools',
   },
   {
     icon: Palette,
     title: 'UI/UX Design',
-    description: 'Interfaces that are intuitive, beautiful, and functional.',
+    description: 'Intuitive, beautiful interfaces that people actually use',
   },
   {
     icon: Server,
     title: 'Backend & APIs',
-    description: 'Scalable servers and APIs your product can grow on.',
+    description: 'Scalable servers, databases, and integrations',
   },
   {
     icon: MessageSquare,
     title: 'Digital Consulting',
-    description: 'Strategy and technical direction for your next build.',
+    description: 'Technical strategy and direction for teams moving fast',
   },
 ]
 
-export const Agency = () => {
-  const headerRef = useScrollReveal()
-  const gridRef = useScrollReveal()
-  const ctaRef = useScrollReveal()
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08 },
+  },
+}
 
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+  },
+}
+
+export const Agency = () => {
   return (
-    <section id="work" className="py-24 md:py-32">
+    <section id="agency" className="border-t border-[#27272A] py-24 md:py-32">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12 lg:px-20">
         {/* Header */}
-        <div ref={headerRef} className="fade-up mb-16">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <span className="section-label">Agency</span>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
-            We build for your business
+            The Agency
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-[#888888]">
-            From concept to deployment — we design, develop, and ship custom
-            software products tailored to your business. Web, mobile, AI, and
-            beyond.
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-[#A1A1AA]">
+            We solve problems through software.
           </p>
-        </div>
+        </motion.div>
 
         {/* Service cards grid */}
-        <div
-          ref={gridRef}
-          className="stagger-children grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        <motion.div
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {services.map((service) => {
             const Icon = service.icon
             return (
-              <div
+              <motion.div
                 key={service.title}
-                className="group rounded-xl border border-[#1F1F1F] bg-[#111111] p-6 transition-all duration-300 hover:border-[#333333] hover:shadow-[0_0_30px_rgba(232,255,71,0.04)]"
+                variants={item}
+                className="group rounded-xl border border-[#27272A] bg-[#111111] p-6 transition-all duration-300 hover:border-[#3F3F46] hover:shadow-[0_0_30px_rgba(232,255,71,0.04)]"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#E8FF47]/10">
                   <Icon
@@ -92,16 +113,22 @@ export const Agency = () => {
                 <h3 className="mb-2 text-base font-semibold text-white">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-[#888888]">
+                <p className="text-sm leading-relaxed text-[#A1A1AA]">
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div ref={ctaRef} className="fade-up mt-12">
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <a
             href="#contact"
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#E8FF47] transition-all duration-200 hover:gap-3"
@@ -109,7 +136,7 @@ export const Agency = () => {
             Start a Project
             <span className="text-base">→</span>
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
