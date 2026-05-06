@@ -65,9 +65,12 @@ export const KivContent = () => {
             <span className="text-xs font-medium text-[#A1A1AA]">Beta</span>
           </div>
 
-          <h1 className="mb-4 text-5xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl">
-            Kiv
-          </h1>
+          <div className="mb-4 flex items-center gap-4 md:gap-6">
+            <img src="/assets/kiv-logo.ico" alt="" className="h-12 w-12 rounded-xl md:h-16 md:w-16" />
+            <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl">
+              Kiv
+            </h1>
+          </div>
           <p className="mb-3 text-lg font-medium text-[#E8FF47] md:text-xl">
             Your daily check-in. Simplified.
           </p>

@@ -44,7 +44,7 @@ export const Hero = () => {
       />
 
       <motion.div
-        className="relative z-10 mx-auto max-w-[1280px] px-6 py-32 md:px-12 lg:px-20"
+        className="relative z-10 mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-32 lg:px-20"
         variants={container}
         initial="hidden"
         whileInView="visible"

@@ -14,6 +14,7 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -46,6 +47,7 @@ export const Navbar = () => {
   const handleNavClick = () => {
     setMenuOpen(false)
     setDropdownOpen(false)
+    setMobileDropdownOpen(false)
   }
 
   return (
@@ -150,7 +152,7 @@ export const Navbar = () => {
       {/* Mobile menu — full-screen overlay */}
       <div
         className={cn(
-          'fixed inset-0 top-0 z-40 flex flex-col bg-[#0A0A0A] transition-all duration-300 md:hidden',
+          'fixed inset-0 top-0 z-[100] flex flex-col bg-[#0A0A0A] transition-all duration-300 md:hidden',
           menuOpen
             ? 'pointer-events-auto opacity-100'
             : 'pointer-events-none opacity-0'
@@ -188,13 +190,23 @@ export const Navbar = () => {
             </a>
             <div className="flex flex-col border-b border-[#27272A]/30">
               <button
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                 className="flex items-center justify-between py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
                 style={{ fontFamily: 'var(--font-display), sans-serif' }}
               >
                 Products
-                <ChevronDown size={20} className="text-[#52525B]" />
+                <ChevronDown 
+                  size={20} 
+                  className={cn(
+                    "text-[#52525B] transition-transform duration-300",
+                    mobileDropdownOpen && "rotate-180"
+                  )} 
+                />
               </button>
-              <div className="flex flex-col gap-4 pb-6 pl-4">
+              <div className={cn(
+                "flex flex-col gap-4 overflow-hidden transition-all duration-300",
+                mobileDropdownOpen ? "max-h-40 pb-6 pl-4 opacity-100" : "max-h-0 opacity-0"
+              )}>
                 <Link
                   href="/studio/kiv"
                   onClick={handleNavClick}

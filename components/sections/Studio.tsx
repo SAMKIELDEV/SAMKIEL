@@ -11,6 +11,7 @@ interface Product {
   detailUrl: string
   liveUrl: string
   status: 'Live' | 'Beta' | 'Coming Soon'
+  logo?: string
 }
 
 const products: Product[] = [
@@ -22,6 +23,7 @@ const products: Product[] = [
     detailUrl: '/studio/kiv',
     liveUrl: 'https://kiv.samkiel.tech',
     status: 'Beta',
+    logo: '/assets/kiv-logo.ico',
   },
 ]
 
@@ -87,9 +89,14 @@ export const Studio = () => {
               </div>
 
               {/* Product info */}
-              <h3 className="mb-1 text-2xl font-bold text-white md:text-3xl">
-                {product.name}
-              </h3>
+              <div className="mb-1 flex items-center gap-3">
+                {product.logo && (
+                  <img src={product.logo} alt="" className="h-8 w-8 rounded-lg" />
+                )}
+                <h3 className="text-2xl font-bold text-white md:text-3xl">
+                  {product.name}
+                </h3>
+              </div>
               <p className="mb-3 text-sm font-medium text-[#E8FF47]">
                 {product.tagline}
               </p>
