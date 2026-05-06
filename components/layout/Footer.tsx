@@ -28,6 +28,7 @@ const socials = [
 
 const productLinks = [
   { label: 'Kiv', href: '/studio/kiv' },
+  { label: 'SAMKIEL ID', href: 'https://account.samkiel.tech' },
 ]
 
 const companyLinks = [
@@ -104,12 +105,23 @@ export const Footer = () => {
               <ul className="flex flex-col gap-3">
                 {productLinks.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
-                    >
-                      {link.label}
-                    </Link>
+                    {link.href.startsWith('http') ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-[#A1A1AA] transition-colors duration-200 hover:text-[#E8FF47]"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
