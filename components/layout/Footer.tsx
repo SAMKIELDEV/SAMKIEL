@@ -61,7 +61,7 @@ export const Footer = () => {
           <div className="max-w-xs">
             <Link href="/" className="inline-block">
               <Image
-                src="/assets/samkiel_logo.png"
+                src="/assets/SAMKIEL_LOGO.png"
                 alt="SAMKIEL"
                 width={160}
                 height={40}
