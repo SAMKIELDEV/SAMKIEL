@@ -168,7 +168,7 @@ export const Footer = () => {
         <div className="mt-14 border-t border-[#27272A] pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-center">
             <p className="text-center text-[13px] text-[#52525B] sm:text-left">
-              © {new Date().getFullYear()} SAMKIEL. All rights reserved.
+              © {new Date().getFullYear()} SAMKIEL Technologies LTD. All rights reserved.
             </p>
             <a
               href="mailto:hello@samkiel.tech"
