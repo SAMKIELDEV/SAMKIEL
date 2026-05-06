@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">7. Cookies</h2>
             <p>
-              samkiel.tech may use cookies and similar tracking technologies to improve your browsing experience and analyse site traffic. You can control cookie preferences through your browser settings. Disabling cookies may affect the functionality of some parts of our website.
+              samkiel.tech may use cookies and similar tracking TECHNOLOGIES to improve your browsing experience and analyse site traffic. You can control cookie preferences through your browser settings. Disabling cookies may affect the functionality of some parts of our website.
             </p>
           </section>
 
