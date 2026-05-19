@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-none space-y-8 text-[#A1A1AA] leading-relaxed">
           <section>
             <p>
-              Welcome to <strong className="text-white">SAMKIEL</strong>. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website at <Link href="https://samkiel.tech" className="text-[#E8FF47] hover:underline">samkiel.tech</Link> or use any of our studio products.
+              <strong className="text-white">SAMKIEL Technologies Limited</strong> (RC 9540139) is a software company incorporated in Nigeria. We can be reached at hello@samkiel.tech. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website at <Link href="https://samkiel.tech" className="text-[#E8FF47] hover:underline">samkiel.tech</Link> or use any of our studio products.
             </p>
             <p>
               At SAMKIEL, we are committed to protecting your privacy in accordance with the <strong className="text-white">Nigeria Data Protection Regulation (NDPR)</strong> and other applicable laws.
