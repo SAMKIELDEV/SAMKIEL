@@ -28,7 +28,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">1. About SAMKIEL</h2>
             <p>
-              SAMKIEL is a software company operating under two arms: an <strong className="text-white">Agency</strong> that builds digital products for clients, and a <strong className="text-white">Studio</strong> that builds and operates internally owned products.
+              SAMKIEL Technologies Limited (RC 9540139) is a software company incorporated in Nigeria under the Companies and Allied Matters Act (CAMA) 2020. It operates under two arms: an <strong className="text-white">Agency</strong> that builds digital products for clients, and a <strong className="text-white">Studio</strong> that builds and operates internally owned products.
             </p>
           </section>
 

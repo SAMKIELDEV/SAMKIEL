@@ -195,9 +195,14 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-14 border-t border-[#27272A] pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-center">
-            <p className="text-center text-[13px] text-[#52525B] sm:text-left">
-              © {new Date().getFullYear()} SAMKIEL TECHNOLOGIES LTD. All rights reserved.
-            </p>
+            <div className="text-center sm:text-left">
+              <p className="text-[13px] text-[#52525B]">
+                © {new Date().getFullYear()} SAMKIEL TECHNOLOGIES LTD. All rights reserved.
+              </p>
+              <p className="mt-1 text-[11px] text-[#888888]">
+                SAMKIEL TECHNOLOGIES LIMITED · RC 9540139
+              </p>
+            </div>
             <a
               href="mailto:hello@samkiel.tech"
               className="hidden text-[13px] text-[#52525B] transition-colors duration-200 hover:text-[#E8FF47] sm:block"
