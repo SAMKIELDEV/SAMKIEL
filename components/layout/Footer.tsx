@@ -200,7 +200,7 @@ export const Footer = () => {
                 © {new Date().getFullYear()} SAMKIEL TECHNOLOGIES LTD. All rights reserved.
               </p>
               <p className="mt-1 text-[11px] text-[#888888]">
-                SAMKIEL TECHNOLOGIES LIMITED · RC 9540139
+                RC 9540139
               </p>
             </div>
             <a
