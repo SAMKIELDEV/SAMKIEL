@@ -197,7 +197,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-center">
             <div className="text-center sm:text-left">
               <p className="text-[13px] text-[#52525B]">
-                © {new Date().getFullYear()} SAMKIEL TECHNOLOGIES LTD. All rights reserved.
+                © {new Date().getFullYear()} SAMKIEL Technologies Limited. All rights reserved.
               </p>
               <p className="mt-1 text-[11px] text-[#888888]">
                 RC 9540139
