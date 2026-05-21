@@ -33,7 +33,7 @@
 ### V1 Milestone (Agency Landing Page)
 - **Hero Section:** [DONE] Animated text, high-end dark vibe.
 - **Agency Section:** [DONE] Sharp copy about digitalization.
-- **Studio Section:** [DONE] Cards for BreezrChat and SKDL.
+- **Studio Section:** [DONE] Cards for Kiv.
 - **About/Contact:** [DONE] Essential info and links.
 - **Responsive:** [DONE] Optimized for desktop/tablet/mobile.
 
@@ -58,8 +58,8 @@
 ---
 
 ## Product Ecosystem (Studio)
-- **BreezrChat** → `https://breezrchat.onrender.com/`
-- **SKDL** → `https://samkiel.online`
+- **Kiv** → `https://Kiv.onrender.com/`
+- **Kiv** → `https://samkiel.online`
 
 ---
 

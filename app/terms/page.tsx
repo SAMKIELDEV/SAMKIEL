@@ -21,7 +21,7 @@ export default function TermsOfService() {
         <div className="max-w-none space-y-8 text-[#A1A1AA] leading-relaxed">
           <section>
             <p>
-              Welcome to <strong className="text-white">SAMKIEL</strong>. By accessing or using our website at <Link href="https://samkiel.tech" className="text-[#E8FF47] hover:underline">samkiel.tech</Link>, or any of our studio products (including BreezrChat and SKDL), you agree to be bound by these Terms of Service. Please read them carefully before using our services.
+              Welcome to <strong className="text-white">SAMKIEL</strong>. By accessing or using our website at <Link href="https://samkiel.tech" className="text-[#E8FF47] hover:underline">samkiel.tech</Link>, or any of our studio products (including Kiv), you agree to be bound by these Terms of Service. Please read them carefully before using our services.
             </p>
           </section>
 
@@ -70,7 +70,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">5. Studio Products</h2>
             <p>
-              SAMKIEL&apos;s studio products — including BreezrChat and SKDL — are provided on an &quot;as-is&quot; basis. By using any SAMKIEL studio product, you agree to:
+              SAMKIEL&apos;s studio products — including Kiv — are provided on an &quot;as-is&quot; basis. By using any SAMKIEL studio product, you agree to:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Use the product only for its intended lawful purpose.</li>

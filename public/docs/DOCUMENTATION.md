@@ -79,8 +79,8 @@ We use a custom hook `useScrollReveal` (or CSS Intersection Observer classes) to
 
 ## 6. Studio Products
 The Studio section links to external/sub-projects:
-- **BreezrChat:** `https://breezrchat.onrender.com/`
-- **SKDL:** `https://samkiel.online`
+- **Kiv:** `https://Kiv.onrender.com/`
+- **Kiv:** `https://samkiel.online`
 
 ---
 

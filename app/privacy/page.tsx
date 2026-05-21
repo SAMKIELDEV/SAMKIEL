@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
               <li><strong className="text-white">Contact Information:</strong> Name, email address, and phone number when you fill out a form.</li>
               <li><strong className="text-white">Usage Data:</strong> Information about how you interact with our website, including IP address, browser type, and device information.</li>
               <li><strong className="text-white">Client Data:</strong> Information provided to us for the purpose of executing software development projects.</li>
-              <li><strong className="text-white">Product Data:</strong> Data generated or provided when using our studio products (e.g., BreezrChat, SKDL).</li>
+              <li><strong className="text-white">Product Data:</strong> Data generated or provided when using our studio products (e.g. Kiv ).</li>
             </ul>
           </section>
 

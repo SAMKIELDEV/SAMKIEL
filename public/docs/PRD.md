@@ -184,8 +184,8 @@ Powered by Resend API. On submit: show confirmation state (toast via Sonner).
 | V1 | V2 |
 |---|---|
 | Agency landing page | Company homepage (ecosystem front door) |
-| BreezrChat — listed as Studio product | **Dropped** |
-| SKDL — listed as Studio product | **Dropped** |
+| Kiv — listed as Studio product | **Dropped** |
+| Kiv — listed as Studio product | **Dropped** |
 | No Studio/Agency arm distinction | Two arms clearly presented |
 | No auth infrastructure mentioned | SAMKIEL ID referenced as Studio auth layer |
 | No product nav | Products dropdown in nav |
@@ -198,7 +198,7 @@ Powered by Resend API. On submit: show confirmation state (toast via Sonner).
 ### Phase 2 — This Update (V2)
 - [ ] Update Hero copy and CTAs to reflect company identity
 - [ ] Add two-arm section (Agency + Studio)
-- [ ] Update Studio section — remove BreezrChat and SKDL, add Kiv card
+- [ ] Update Studio section — remove Kiv, add Kiv card
 - [ ] Update About section copy and stats
 - [ ] Update navigation — add Products dropdown
 - [ ] Update footer — remove old product links, add new structure
