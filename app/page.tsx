@@ -6,6 +6,7 @@ import { Studio } from '@/components/sections/Studio'
 import { SamkielID } from '@/components/sections/SamkielID'
 import { Agency } from '@/components/sections/Agency'
 import { About } from '@/components/sections/About'
+import { Community } from '@/components/sections/Community'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Studio />
       <Agency />
       <About />
+      <Community />
       <ContactCTA />
       <Footer />
     </main>
