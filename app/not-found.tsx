@@ -14,7 +14,7 @@ export default function NotFound() {
     <main className="flex min-h-screen flex-col bg-[#0A0A0A] text-white">
       <Navbar />
       
-      <div className="noise-overlay grid-pattern relative flex flex-grow flex-col items-center justify-center px-6 pt-32 pb-20 text-center overflow-hidden">
+      <div className="noise-overlay grid-pattern relative flex flex-grow flex-col items-center justify-center px-6 pt-16 pb-20 text-center overflow-hidden">
         
         {/* Clean Flat Content Container */}
         <motion.div 
@@ -23,10 +23,6 @@ export default function NotFound() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Subtle Accent Label */}
-          <div className="mx-auto mb-6 inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#E8FF47]">
-            404 Error
-          </div>
 
           {/* Large Solid 404 Text */}
           <h1 
