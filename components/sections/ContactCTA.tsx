@@ -20,15 +20,13 @@ export const ContactCTA = () => {
         <p className="mx-auto mb-10 max-w-lg text-base text-[#A1A1AA]">
           Tell us what you&apos;re working on. We&apos;ll take it from there.
         </p>
-        <a
-          href="https://account.samkiel.tech"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/contact"
           className="inline-flex items-center gap-2 rounded-full bg-[#E8FF47] px-8 py-4 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_30px_rgba(232,255,71,0.25)]"
         >
-          Create a SAMKIEL ID
+          Start a Project
           <ArrowRight size={14} />
-        </a>
+        </Link>
       </motion.div>
     </section>
   )
