@@ -45,7 +45,7 @@ export default function CareersPage() {
             </h1>
             
             <p className="mx-auto mb-12 max-w-xl text-base leading-relaxed text-[#A1A1AA] md:text-lg">
-              We build digital products and client solutions from Lagos, Nigeria. We are a team driven by intention, crafting systems that endure.
+              We build digital products and client solutions. We are a team driven by intention, crafting systems that endure.
             </p>
           </div>
 
