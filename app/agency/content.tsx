@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, MotionConfig } from 'framer-motion'
 import Link from 'next/link'
 import {
   Globe,
@@ -152,7 +152,7 @@ const item = {
 
 export const AgencyContent = () => {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       {/* Hero */}
       <section className="noise-overlay grid-pattern relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
         {/* Gradient orb */}
@@ -389,7 +389,7 @@ export const AgencyContent = () => {
                     {project.description}
                   </p>
                   <div className="mt-auto flex items-center justify-between">
-                    <span className="text-xs text-[#52525B]">{project.display}</span>
+                    <span className="text-xs text-[#A1A1AA]">{project.display}</span>
                     <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-all duration-200 group-hover:gap-2.5 group-hover:text-[#E8FF47]">
                       Visit
                       <ArrowUpRight size={14} />
@@ -411,7 +411,7 @@ export const AgencyContent = () => {
                 <Plus size={20} className="text-[#52525B]" />
               </div>
               <p className="text-sm font-medium text-white">More, in the works</p>
-              <p className="mt-1 max-w-[14rem] text-xs leading-relaxed text-[#52525B]">
+              <p className="mt-1 max-w-[14rem] text-xs leading-relaxed text-[#A1A1AA]">
                 New client projects land here as we design and ship them.
               </p>
             </motion.div>
@@ -444,6 +444,6 @@ export const AgencyContent = () => {
           </Link>
         </motion.div>
       </section>
-    </>
+    </MotionConfig>
   )
 }

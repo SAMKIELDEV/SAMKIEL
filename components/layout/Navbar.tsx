@@ -75,12 +75,12 @@ export const Navbar = () => {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
-          <a
+          <Link
             href="/#about"
             className="text-sm font-medium text-[#A1A1AA] transition-colors duration-200 hover:text-white"
           >
             About
-          </a>
+          </Link>
 
           {/* Products dropdown */}
           <div ref={dropdownRef} className="relative">
@@ -180,14 +180,14 @@ export const Navbar = () => {
 
         <div className="flex flex-1 flex-col overflow-y-auto px-6 pt-8 pb-12">
           <nav className="flex flex-col border-t border-[#27272A]/30">
-            <a
+            <Link
               href="/#about"
               onClick={handleNavClick}
               className="flex items-center justify-between border-b border-[#27272A]/30 py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
               style={{ fontFamily: 'var(--font-display), sans-serif' }}
             >
               About
-            </a>
+            </Link>
             <div className="flex flex-col border-b border-[#27272A]/30">
               <button
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
