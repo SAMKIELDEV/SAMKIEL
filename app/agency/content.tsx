@@ -349,11 +349,11 @@ export const AgencyContent = () => {
               >
                 {/* Thumbnail — project logo on a clean plate, monogram fallback */}
                 {project.logo ? (
-                  <div className="relative flex h-44 items-center justify-center overflow-hidden border-b border-[#27272A] bg-white">
+                  <div className="relative flex h-44 items-center justify-center overflow-hidden border-b border-[#27272A]">
                     <img
                       src={project.logo}
                       alt={`${project.name} logo`}
-                      className="h-20 w-auto max-w-[60%] object-contain"
+                      className="h-24 w-auto max-w-[60%] object-contain"
                     />
                   </div>
                 ) : (
