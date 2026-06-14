@@ -56,7 +56,7 @@ const productLinks = [
 
 const companyLinks = [
   { label: 'About', href: '/#about' },
-  { label: 'Agency', href: '/#agency' },
+  { label: 'Agency', href: '/agency' },
   { label: 'Careers', href: '/careers' },
   { label: 'Work', href: '/work' },
 ]

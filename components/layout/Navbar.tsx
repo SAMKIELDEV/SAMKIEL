@@ -120,12 +120,12 @@ export const Navbar = () => {
             </div>
           </div>
 
-          <a
-            href="/#agency"
+          <Link
+            href="/agency"
             className="text-sm font-medium text-[#A1A1AA] transition-colors duration-200 hover:text-white"
           >
             Agency
-          </a>
+          </Link>
         </div>
 
         {/* Desktop CTA */}
@@ -216,14 +216,14 @@ export const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <a
-              href="/#agency"
+            <Link
+              href="/agency"
               onClick={handleNavClick}
               className="flex items-center justify-between border-b border-[#27272A]/30 py-6 text-2xl font-semibold tracking-tight text-white transition-colors hover:text-[#E8FF47]"
               style={{ fontFamily: 'var(--font-display), sans-serif' }}
             >
               Agency
-            </a>
+            </Link>
             <Link
               href="/work"
               onClick={handleNavClick}
