@@ -107,6 +107,7 @@ interface Project {
   display: string
   initials: string
   accent: string
+  logo?: string
   status: 'Live' | 'In Progress'
 }
 
@@ -125,6 +126,7 @@ const projects: Project[] = [
     display: 'pgpoetry.samkiel.dev',
     initials: 'PG',
     accent: 'linear-gradient(135deg, rgba(232,255,71,0.16) 0%, rgba(232,255,71,0.02) 100%)',
+    logo: '/assets/pg_logo.png',
     status: 'Live',
   },
 ]
@@ -345,19 +347,29 @@ export const AgencyContent = () => {
                 variants={item}
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#27272A] bg-[#111111] transition-all duration-300 hover:border-[#E8FF47]/30 hover:shadow-[0_0_40px_rgba(232,255,71,0.06)]"
               >
-                {/* Thumbnail / monogram */}
-                <div
-                  className="relative flex h-44 items-center justify-center overflow-hidden border-b border-[#27272A]"
-                  style={{ background: project.accent }}
-                >
-                  <div className="grid-pattern absolute inset-0 opacity-40" />
-                  <span
-                    className="relative text-5xl font-bold tracking-tight text-white"
-                    style={{ fontFamily: 'var(--font-syne-src), sans-serif' }}
+                {/* Thumbnail — project logo on a clean plate, monogram fallback */}
+                {project.logo ? (
+                  <div className="relative flex h-44 items-center justify-center overflow-hidden border-b border-[#27272A] bg-white">
+                    <img
+                      src={project.logo}
+                      alt={`${project.name} logo`}
+                      className="h-20 w-auto max-w-[60%] object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="relative flex h-44 items-center justify-center overflow-hidden border-b border-[#27272A]"
+                    style={{ background: project.accent }}
                   >
-                    {project.initials}
-                  </span>
-                </div>
+                    <div className="grid-pattern absolute inset-0 opacity-40" />
+                    <span
+                      className="relative text-5xl font-bold tracking-tight text-white"
+                      style={{ fontFamily: 'var(--font-syne-src), sans-serif' }}
+                    >
+                      {project.initials}
+                    </span>
+                  </div>
+                )}
 
                 {/* Body */}
                 <div className="flex flex-1 flex-col p-6">
