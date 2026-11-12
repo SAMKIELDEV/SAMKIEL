@@ -72,7 +72,7 @@ export const SamkielID = () => {
               variants={itemVariants}
             >
               <a
-                href="https://account.samkiel.tech"
+                href="https://accounts.samkiel.tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold text-black transition-transform hover:scale-[1.02] active:scale-[0.98]"
@@ -82,7 +82,7 @@ export const SamkielID = () => {
               </a>
               
               <a
-                href="https://account.samkiel.tech"
+                href="https://accounts.samkiel.tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
@@ -98,7 +98,7 @@ export const SamkielID = () => {
             >
               Already have an account?{' '}
               <a 
-                href="https://account.samkiel.tech/login" 
+                href="https://accounts.samkiel.tech/login" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white transition-colors hover:text-accent"

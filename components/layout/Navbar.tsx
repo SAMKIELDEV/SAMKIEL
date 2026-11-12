@@ -130,7 +130,7 @@ export const Navbar = () => {
 
         {/* Desktop CTA */}
         <a
-          href="https://account.samkiel.tech"
+          href="https://accounts.samkiel.tech"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden rounded-full bg-[#E8FF47] px-5 py-2.5 text-sm font-semibold text-[#0A0A0A] transition-all duration-200 hover:bg-[#d4eb3a] hover:shadow-[0_0_20px_rgba(232,255,71,0.3)] md:inline-flex"
@@ -236,7 +236,7 @@ export const Navbar = () => {
 
           <div className="mt-auto flex flex-col gap-4 pt-12">
             <a
-              href="https://account.samkiel.tech"
+              href="https://accounts.samkiel.tech"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavClick}

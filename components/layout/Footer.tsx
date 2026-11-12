@@ -51,7 +51,7 @@ const socials = [
 
 const productLinks = [
   { label: 'Kiv', href: '/studio/kiv' },
-  { label: 'SAMKIEL ID', href: 'https://account.samkiel.tech' },
+  { label: 'SAMKIEL ID', href: 'https://accounts.samkiel.tech' },
 ]
 
 const companyLinks = [

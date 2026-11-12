@@ -26,7 +26,7 @@ SAMKIEL is a software company — not just an agency. It builds client solutions
 2. **SAMKIEL Studio** — internally owned products
 
 **Auth infrastructure:**
-- **SAMKIEL ID** — a unified authentication layer (like Google Account) used across all Studio products. It is not a product — it is infrastructure. It lives at `account.samkiel.tech` and is referenced on the site only in the context of Studio products.
+- **SAMKIEL ID** — a unified authentication layer (like Google Account) used across all Studio products. It is not a product — it is infrastructure. It lives at `accounts.samkiel.tech` and is referenced on the site only in the context of Studio products.
 
 ---
 
@@ -129,7 +129,7 @@ Powered by Resend API. On submit: show confirmation state (toast via Sonner).
 | Page | URL | Notes |
 |---|---|---|
 | Kiv product page | `kiv.samkiel.tech` or `/studio/kiv` | To be scoped separately |
-| SAMKIEL ID portal | `account.samkiel.tech` | Auth infrastructure — not linked from main nav |
+| SAMKIEL ID portal | `accounts.samkiel.tech` | Auth infrastructure — not linked from main nav |
 | Agency work / case studies | `samkiel.tech/work` | Can be sparse now, grows over time |
 | Terms of Service | `samkiel.tech/terms` | Already live |
 | Privacy Policy | `samkiel.tech/privacy` | Already live |
